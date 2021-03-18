@@ -8,11 +8,10 @@ dist: focal
 #      key_url: 'https://www.mongodb.org/static/pgp/server-4.4.asc'
 ################################################################
 
+os: linux
+
 # Set language support to JavaScript / NodeJS
 language: node_js
-
-# sudo privileges are not needed
-sudo: false
 
 # Enable MySQL or MongoDB service
 services:
@@ -34,11 +33,6 @@ install:
 script:
   - npm run lint
   - npm test
-
-# Branch blocklist - These branches won't trigger a build.
-branches:
-  except:
-  - experimental
 
 # Branch safelist - These branches will trigger a build.
 branches:
