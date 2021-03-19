@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import { Button } from '@material-ui/core';
 
 function App() {
 	return (
@@ -7,6 +8,8 @@ function App() {
 			<header className="App-header container">
 				<h1>Coming Soon</h1>
 			</header>
+			<br />
+			<Button color="primary">Hello World</Button>
 			<br />
 			<a
 				className="App-link"
