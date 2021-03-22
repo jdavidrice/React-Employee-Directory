@@ -58,7 +58,7 @@ function App() {
 	);
 
 	const [data, setData] = useState([]);
-	const empAPI = 'https://randomuser.me/api/?results=10&noinfo';
+  const empAPI = 'https://randomuser.me/api/?results=20';
 
 	useEffect(() => {
 		(async () => {
@@ -91,16 +91,7 @@ function App() {
 	return (
 		<div className="App">
 			<h1>Another Employee Directory</h1>
-			<Table columns={columns} data={data} />
-			<br />
-			<a
-				className="App-link"
-				href="https://reactjs.org"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-          Learn React
-			</a>
+			<Table columns={columns} data={data} />	
 		</div>
 	);
 }
