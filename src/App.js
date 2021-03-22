@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 /* eslint-disable react/display-name */
 /* eslint-disable react/prop-types */
 import React, { useMemo, useState, useEffect } from 'react';
@@ -6,82 +7,87 @@ import axios from 'axios';
 import Table from './Table';
 import './App.css';
 
-const Genres = ({ values }) => {
-	return (
-		<>
-			{values.map((genre, idx) => {
-				return (
-					<span key={idx} className="badge">
-						{genre}
-					</span>
-				);
-			})}
-		</>
-	);
-};
+// const Genres = ({ values }) => {
+// 	return (
+// 		<>
+// 			{values.map((genre, idx) => {
+// 				return (
+// 					<span key={idx} className="badge">
+// 						{genre}
+// 					</span>
+// 				);
+// 			})}
+// 		</>
+// 	);
+// };
 
 function App() {
+	// const [error, setError] = useState(null);
+	// const [isLoaded, setIsLoaded] = useState(false);
+	// const [items, setItems] = useState([]);
+
 	const columns = useMemo(
 		() => [
 			{
-				Header: 'TV Show',
+				Header: 'Employee',
 				columns: [
 					{
-						Header: 'Name',
-						accessor: 'show.name'
+						Header: 'Picture',
+						accessor: 'picture.large'
 					},
 					{
-						Header: 'Type',
-						accessor: 'show.type'
+						Header: 'Last Name',
+						accessor: 'name.last'
+					},
+					{
+						Header: 'First Name',
+						accessor: 'name.first'
+					},
+					{
+						Header: 'Phone Number',
+						accessor: 'phone'
+					},
+					{
+						Header: 'Email',
+						accessor: 'email'
 					}
 				]
 			},
-			{
-				Header: 'Details',
-				columns: [
-					{
-						Header: 'Language',
-						accessor: 'show.language'
-					},
-					{
-						Header: 'Genre(s)',
-						accessor: 'show.genres',
-						Cell: ({ cell: { value } }) => <Genres values={value} />
-					},
-					{
-						Header: 'Runtime',
-						accessor: 'show.runtime',
-						Cell: ({ cell: { value } }) => {
-							const hour = Math.floor(value / 60);
-							const min = Math.floor(value % 60);
-							return (
-								<>
-									{hour > 0 ? `${hour} hr${hour > 1 ? 's' : ''} ` : ''}
-									{min > 0 ? `${min} min${min > 1 ? 's' : ''}` : ''}
-								</>
-							);
-						}
-					},
-					{
-						Header: 'Status',
-						accessor: 'show.status'
-					}
-				]
-			}
 		],
 		[]
 	);
 
 	const [data, setData] = useState([]);
+	const empAPI = 'https://randomuser.me/api/?results=10&noinfo';
 
 	useEffect(() => {
 		(async () => {
-			const result = await axios('https://api.tvmaze.com/search/shows?q=railgun');
-			console.log(result);
-			setData(result.data);
+			const result = await axios(empAPI);
+			console.log('result', result);
+			setData(result.data.results);
 		})();
 	}, []);
-  
+
+	// useEffect(() => {
+	// 	axios(empAPI)
+	// 		.then(res => res.json())
+	// 		.then(
+	// 			(result) => {
+	// 				setIsLoaded(true);
+	// 				setData(result);
+	// 			},
+	// 			(error) => {
+	// 				setIsLoaded(true);
+	// 				setError(error);
+	// 			}
+	// 		);
+	// }, []);
+
+	// if (error) {
+	// 	return <div>Error: {error.message}</div>;
+	// } else if (!isLoaded) {
+	// 	return <div>Loading...</div>;
+	// } else {
 	return (
 		<div className="App">
 			<h1>Another Employee Directory</h1>
@@ -93,11 +99,11 @@ function App() {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-        Learn React
+          Learn React
 			</a>
 		</div>
 	);
-  
 }
+// }
 
 export default App;
