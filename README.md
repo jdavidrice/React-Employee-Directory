@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# React Employee Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<span align="center">
 
-## Available Scripts
+[![Travis CI Build Status](https://travis-ci.com/jdavidrice/react-employee-directory.svg?branch=main)](https://travis-ci.com/jdavidrice/react-employee-directory)
+[![GitHub license](https://img.shields.io/github/license/jdavidrice/react-employee-directory)](https://github.com/jdavidrice/react-employee-directory/blob/main/LICENSE)
+[![GitHub Top Language](https://img.shields.io/github/languages/top/jdavidrice/react-employee-directory)](https://github.com/jdavidrice/react-employee-directory)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d133acc447e8406f9b1657e07a5061f1)](https://www.codacy.com/gh/jdavidrice/React-Employee-Directory/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jdavidrice/React-Employee-Directory&amp;utm_campaign=Badge_Grade)
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+</span>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A sample employee directory that uses React and allows users to sort data by each column heading, and to search for last names. This app uses [React Table](https://react-table.tanstack.com/) and [Random User Generator](https://randomuser.me/).
 
-### `yarn test`
+[Link to Deployed App](https://jdavidrice.github.io/React-Employee-Directory/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Photo of App](public/emp_dir.png)
 
-### `yarn build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+There is nothing to install to use this web app. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Sample employee information can be sorted by clicking on each column heading (ascending or descending). Data can be filtered by last name by typing into the "Sort by Last Name" search field.  
 
-### `yarn eject`
+## Questions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Please contact me at the email address listed below with any questions about this app. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[jdavidrice@gmail.com](mailto:jdavidrice@gmail.com)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[GitHub Profile](https://github.com/jdavidrice)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
+MIT License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copyright (c) 2021 Jeremy Rice
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Code Splitting
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  Jeremy Rice
 
-### Making a Progressive Web App
+  This article was used as a reference for the app: [React Table Article](https://blog.logrocket.com/complete-guide-building-smart-data-table-react/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Tests
 
-### Advanced Configuration
+This GitHub Pages app uses Travis CI, Datree Smart Policy, and Codacy Code Quality metrics. It also uses Jest for unit tests. To run Jest, fork and clone the respository, then install dependencies by running this command from your terminal:
+```
+npm install --save
+```
+Then, run this command:
+```
+npm run test a
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*   [Return to Top](#react-employee-directory)

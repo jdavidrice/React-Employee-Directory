@@ -62,7 +62,8 @@ function App() {
   } else {
     return (
       <div className="App">
-        <h1>Another Employee Directory</h1>
+        <h1>International Manufacturing Concern, INC.</h1>
+        <h2>Employee Directory</h2>
         <Table columns={columns} data={data} />
       </div>
     );
